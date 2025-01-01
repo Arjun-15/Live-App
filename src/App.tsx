@@ -1,0 +1,27 @@
+import "./App.css";
+import { CryptoNavbar } from "./components/Navbar/Navbar";
+import { CryptoList } from "./components/CryptoList/CryptoList";
+import { store } from "./redux/store";
+import { Provider } from "react-redux";
+import "@fortawesome/fontawesome-free/css/all.min.css"; // Import Font Awesome CSS
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Correct imports
+import { CoinDetail } from "./components/CoinDetail/CoinDetail";
+import { Home } from "./Portfolio/components/Home";
+
+function App() {
+  return (
+    <Router>
+      <Provider store={store}>
+        
+        <Routes>
+          <Route path="/" element={<><CryptoNavbar /><CryptoList /></>} />
+          <Route path="/detail/:coinId" element={<><CryptoNavbar /><CoinDetail /></>} />
+          <Route path="/me" element={<Home />} />
+          {/* Add more routes here if needed */}
+        </Routes>
+      </Provider>
+    </Router>
+  );
+}
+
+export default App;
