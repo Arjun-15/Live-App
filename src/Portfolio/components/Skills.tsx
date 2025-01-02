@@ -17,7 +17,7 @@ export const Skills: React.FC<SkillsProps> = ({ theme, skills }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
+        entries.forEach((entry:any) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("animate");
           } else {
