@@ -2,12 +2,11 @@ import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { Connection } from "./Connection";
 import { Link } from "react-router-dom";
+import { useThemeContext } from "../../context/portfolioContext/portfolioContext";
 
-interface ContactMe {
-    theme: string;
-}
-
-export const Contact: React.FC<ContactMe> = ({ theme }) => {
+export const Contact: React.FC = () => {
+  const { theme } = useThemeContext();
+  console.log(theme);
   return (
     <div id="contact" className={theme === "dark" ? "bg-dark text-light pt-5 pb-5" : "bg-light text-dark pt-5 pb-5"}>
       <Container>
@@ -46,7 +45,7 @@ export const Contact: React.FC<ContactMe> = ({ theme }) => {
           <Col md={5} className="text-md-right" style={{textAlign:'right'}}>
             <h4>Email</h4>
             <p>
-              <Link href="mailto:as506347@gmail.com" className="text-primary">as506347@gmail.com</Link>
+              <Link to="mailto:as506347@gmail.com" className="text-primary">as506347@gmail.com</Link>
             </p>
             <h4>Address</h4>
             <p>
@@ -61,7 +60,7 @@ export const Contact: React.FC<ContactMe> = ({ theme }) => {
           </Col>
         </Row>
         <div className="text-center mt-5">
-          <p className="text-muted">Made with <span className="text-danger">&hearts;</span> by Aakash Sharma</p>
+          <p className="text-muted">Made with <span className="text-danger">&hearts;</span> by Arjun Sharma</p>
         </div>
       </Container>
     </div>

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Banner } from "./Banner";
 import { NavbarMe } from "./Navbar";
 import { About } from "./About";
@@ -8,17 +7,17 @@ import { Projects } from "./Project";
 import { Contact } from "./Contact";
 
 export const Home = () => {
-  const [theme, setTheme] = useState("dark");
+  
   return (
     <div data-spy="scroll">
-      <NavbarMe theme={theme} setTheme={setTheme} />
+      <NavbarMe/>
       <div data-target="#navbar-example3" data-offset="0">
-        <Banner theme={theme} connections = {connections}/>
-        <About theme={theme} />
-        <Skills theme={theme} skills={skills} />
-        <Service theme={theme} services={services} />
-        <Projects theme={theme} projects={projects} />
-        <Contact theme={theme} />
+        <Banner />
+        <About />
+        <Skills skills={skills} />
+        <Service services={services} />
+        <Projects projects={projects} />
+        <Contact />
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ console.log(xAxisData)
 // console.log(Array.isArray(yAxisData))
   return (
     <div>
-      <LineChart
+      {/* <LineChart
       xAxis={[{ data: [2,5.5, 2, 8.5, 1.5, 5.0] }]}
       series={[
         {
@@ -31,7 +31,7 @@ console.log(xAxisData)
       ]}
       width={500}
       height={300}
-    />
+    /> */}
 
        {/* <LineChart
       xAxis={[{ data: yAxisData ? yAxisData : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] }]}

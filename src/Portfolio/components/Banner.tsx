@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom";
 import coverImage from "../../assets/Images/cloudDark.png";
 import Image from "../../assets/Images/webdev.4d72dbba32efee3890cef9bcacce7aa7.svg";
 import "../portfolio.css";
 import { Designation } from "./Designation";
 import { Connection } from "./Connection";
+import { Link } from "react-router-dom";
+import { useThemeContext } from "../../context/portfolioContext/portfolioContext";
 
-export const Banner = (props: any) => {
-  const { theme } = props;
+export const Banner = () => {
+  const { theme } = useThemeContext()
   return (
     <div
       id="home"
@@ -36,9 +37,9 @@ export const Banner = (props: any) => {
             </p>
             <Connection />
             <div className="mt-4">
-              {/* <Link to="#" className="resume-button">
+              <Link to="#" className="resume-button">
                 Resume
-              </Link> */}
+              </Link>
             </div>
           </div>
           <div className="col-lg-6 d-none d-lg-block">

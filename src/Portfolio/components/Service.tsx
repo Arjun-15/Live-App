@@ -1,12 +1,13 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import { useThemeContext } from "../../context/portfolioContext/portfolioContext";
 
 interface ServiceProps {
-  theme: string;
   services: any;
 }
 
-export const Service: React.FC<ServiceProps> = ({ theme, services }) => {
+export const Service: React.FC<ServiceProps> = ({  services }) => {
+  const {theme} = useThemeContext();
   return (
     <div
       className={theme === "dark" ? "bg-dark text-light" : "bg-light text-dark"}

@@ -1,7 +1,8 @@
 import { Container } from "react-bootstrap";
+import { useThemeContext } from "../../context/portfolioContext/portfolioContext";
 
-export const About = (props: any) => {
-  const { theme } = props;
+export const About = () => {
+  const { theme } = useThemeContext();
   return (
     <div id="about" className={theme === 'dark' ? "bg-dark text-light" : "bg-light text-dark"}>
       <Container className="pt-5 pb-5">

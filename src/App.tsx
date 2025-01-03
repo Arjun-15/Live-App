@@ -7,6 +7,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css"; // Import Font Awesome C
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Correct imports
 import { CoinDetail } from "./components/CoinDetail/CoinDetail";
 import { Home } from "./Portfolio/components/Home";
+import { ThemeProvider } from "./context/portfolioContext/portfolioContext";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<><CryptoNavbar /><CryptoList /></>} />
           <Route path="/detail/:coinId" element={<><CryptoNavbar /><CoinDetail /></>} />
-          <Route path="/me" element={<Home />} />
+          <Route path="/me" element={<ThemeProvider><Home/></ThemeProvider>} />
           {/* Add more routes here if needed */}
         </Routes>
       </Provider>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { useThemeContext } from "../../context/portfolioContext/portfolioContext";
 
 interface Project {
   image: string;
@@ -8,11 +9,11 @@ interface Project {
 }
 
 interface ProjectsProps {
-  theme: string;
   projects: Project[];
 }
 
-export const Projects: React.FC<ProjectsProps> = ({ theme, projects }) => {
+export const Projects: React.FC<ProjectsProps> = ({ projects }) => {
+  const { theme } = useThemeContext();
   return (
     <div
       id="project"

@@ -48,3 +48,19 @@ export default tseslint.config({
   },
 })
 ```
+
+
+            10
+          6     12
+      2   8   11    15
+
+      2 left most node
+      6 root node 
+      8 right node
+      10 root node
+      11 left node
+      12 root node
+      15 right node
+
+      95138
+      251176

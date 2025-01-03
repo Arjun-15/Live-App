@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import { useThemeContext } from "../../context/portfolioContext/portfolioContext";
 
 interface Skill {
   name: string;
@@ -7,12 +8,12 @@ interface Skill {
 }
 
 interface SkillsProps {
-  theme: string;
   skills: Skill[];
 }
 
-export const Skills: React.FC<SkillsProps> = ({ theme, skills }) => {
+export const Skills: React.FC<SkillsProps> = ({ skills }) => {
   const skillRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const {theme} = useThemeContext();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
