@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Co
 import { CoinDetail } from "./components/CoinDetail/CoinDetail";
 import { Home } from "./Portfolio/components/Home";
 import { ThemeProvider } from "./context/portfolioContext/portfolioContext";
+import { Calculator } from "./Calculator/Calculator";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<><CryptoNavbar /><CryptoList /></>} />
           <Route path="/detail/:coinId" element={<><CryptoNavbar /><CoinDetail /></>} />
           <Route path="/me" element={<ThemeProvider><Home/></ThemeProvider>} />
+          <Route path="/cal" element={<><Calculator/></>} />
           {/* Add more routes here if needed */}
         </Routes>
       </Provider>
