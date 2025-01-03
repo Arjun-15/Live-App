@@ -66,7 +66,7 @@ export const Skills: React.FC<SkillsProps> = ({ skills }) => {
             >
               <Card
                 className="text-center p-3 skill-card"
-                ref={(el) => (skillRefs.current[index] = el)}
+                ref={(el:any) => (skillRefs.current[index] = el)}
               >
                 <Card.Img
                   variant="top"

@@ -1,13 +1,13 @@
 import React from "react";
-import { LineChart, PieChart } from "@mui/x-charts";
+// import { LineChart, PieChart } from "@mui/x-charts";
 
-const sampleData = [
-  { timestamp: '2023-01-01', price: 30 },
-  { timestamp: '2023-01-02', price: 50 },
-  { timestamp: '2023-01-03', price: 40 },
-  { timestamp: '2023-01-04', price: 60 },
-  { timestamp: '2023-01-05', price: 70 },
-];
+// const sampleData = [
+//   { timestamp: '2023-01-01', price: 30 },
+//   { timestamp: '2023-01-02', price: 50 },
+//   { timestamp: '2023-01-03', price: 40 },
+//   { timestamp: '2023-01-04', price: 60 },
+//   { timestamp: '2023-01-05', price: 70 },
+// ];
 interface IMyLineChart{
   prices:[];
 }
